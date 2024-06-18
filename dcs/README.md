@@ -69,7 +69,7 @@ public:
 - Uma classe derivada contém automaticamente todos os membros de dados de sua classe base e (com algumas restrições) todos os membros de função. Uma classe derivada herda os membros de dados e os membros de função de sua classe base.
 
 ***Exemplo de Classe base e Classe derivada***
-[<img align="center" src="./derived_class.png" width="75%"/>](./derived_class.png)
+[<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dcs/derived_class.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dcs/derived_class.png)
 
 [↑ Index ↑](#index)
 
@@ -105,7 +105,7 @@ public:
 - Ser capaz de alterar o nível de acesso dos membros herdados em uma classe derivada oferece um certo grau de flexibilidade, mas lembre-se de que **você só pode tornar o nível de acesso mais rigoroso**, não pode relaxar o nível de acesso especificador na classe base.
 
 ***Efeito do especificador de classe base na acessibilidade de membros herdados***
-[<img align="center" src="./access_specifier.png" width="75%"/>](./access_specifier.png)
+[<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dchttps://github.com/faleite/42cpp03/blob/main/dcs/access_specifier.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dchttps://github.com/faleite/42cpp03/blob/main/dcs/access_specifier.png)
 
 - Em resumo, você precisa considerar dois aspectos ao definir uma hierarquia de classes: **os especificadores de acesso para os membros de cada classe e o especificador de acesso da classe base em cada classe derivada.**
 
@@ -115,7 +115,7 @@ public:
 - Uma classe derivada pode ter quantas classes base diretas forem necessárias para um aplicativo. Isso é chamado de `multiple inheritance` oposto a `single inheritance`, em que uma única classe base é usada. A herança múltipla é usada com muito menos frequência do que a herança única e é melhor evitada tanto quanto possível.
 
 ***m exemplo de herança múltipla***
-[<img align="center" src="./multiple_inheritance.png" width="75%"/>](./multiple_inheritance.png)
+[<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dcs/multiple_inheritance.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dcs/multiple_inheritance.png)
 
 
 ```cpp
@@ -138,11 +138,11 @@ class CerealPack : public Carton, public Contents
 - A solução para este problema é a palavra-chave `virtual`. Tornamos as classes `Faculty` e `Student` como classes base virtuais para evitar duas cópias de `Person` na classe `TA`.
 
 ***m exemplo de herança múltipla***
-[<img align="center" src="./diamond_problem.png" width="75%"/>](./diamond_problem.png)
+[<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dcs/diamond_problem.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dcs/diamond_problem.png)
 
 - Como o virtual resolve o problema do diamante? Herança virtual significa que haverá apenas 1 instância da classe base A e não 2. [fonte](https://stackoverflow.com/questions/2659116/how-does-virtual-inheritance-solve-the-diamond-multiple-inheritance-ambiguit)
 
-[<img align="center" src="./virtual.png" width="75%"/>](./virtual.png)
+[<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dcs/virtual.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dcs/virtual.png)
 
 ## Resources
 - [Create UML class diagrams](https://www.drawio.com/blog/uml-class-diagrams)
