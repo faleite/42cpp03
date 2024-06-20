@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/20 20:29:30 by faaraujo          #+#    #+#              #
-#    Updated: 2024/06/20 20:29:33 by faaraujo         ###   ########.fr        #
+#    Created: 2024/06/20 20:29:18 by faaraujo          #+#    #+#              #
+#    Updated: 2024/06/20 20:29:22 by faaraujo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,10 @@
 #                                 VARIABLES                                    #
 #******************************************************************************#
 
-NAME = ScavTrap
+NAME = FragTrap
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = ClapTrap.cpp ScavTrap.cpp main.cpp
+SRC = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 OBJS = $(SRC:.cpp=.o)
 
 #******************************************************************************#

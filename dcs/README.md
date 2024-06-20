@@ -105,7 +105,7 @@ public:
 - Ser capaz de alterar o nível de acesso dos membros herdados em uma classe derivada oferece um certo grau de flexibilidade, mas lembre-se de que **você só pode tornar o nível de acesso mais rigoroso**, não pode relaxar o nível de acesso especificador na classe base.
 
 ***Efeito do especificador de classe base na acessibilidade de membros herdados***
-[<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dchttps://github.com/faleite/42cpp03/blob/main/dcs/access_specifier.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dchttps://github.com/faleite/42cpp03/blob/main/dcs/access_specifier.png)
+[<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dcs/access_specifier.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dcs/access_specifier.png)
 
 - Em resumo, você precisa considerar dois aspectos ao definir uma hierarquia de classes: **os especificadores de acesso para os membros de cada classe e o especificador de acesso da classe base em cada classe derivada.**
 
@@ -137,7 +137,7 @@ class CerealPack : public Carton, public Contents
 - O problema do diamante ocorre quando duas superclasses de uma classe possuem uma classe base comum. Por exemplo, no diagrama a seguir, a classe TA obtém duas cópias de todos os atributos da classe Person, o que causa ambiguidades.
 - A solução para este problema é a palavra-chave `virtual`. Tornamos as classes `Faculty` e `Student` como classes base virtuais para evitar duas cópias de `Person` na classe `TA`.
 
-***m exemplo de herança múltipla***
+***exemplo de herança múltipla***
 [<img align="center" src="https://github.com/faleite/42cpp03/blob/main/dcs/diamond_problem.png" width="75%"/>](https://github.com/faleite/42cpp03/blob/main/dcs/diamond_problem.png)
 
 - Como o virtual resolve o problema do diamante? Herança virtual significa que haverá apenas 1 instância da classe base A e não 2. [fonte](https://stackoverflow.com/questions/2659116/how-does-virtual-inheritance-solve-the-diamond-multiple-inheritance-ambiguit)
