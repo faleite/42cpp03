@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:49:01 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/20 18:26:02 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/21 22:04:08 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,9 @@ _attackDamage(copyObj._attackDamage)
  * @brief A copy assignment operator overload.
  * (Sobrecarga do operador de atribuição para cópia).
  * 
- * O operador de atribuição de cópia é utilizado para name
- * objeto que já foi inicializado.
+ * O operador de atribuição de cópia permite que um objeto existente seja 
+ * atribuído a outro objeto da mesma classe, copiando o conteúdo de 
+ * um objeto para outro. 
  * 
  * No operador de atribuição de cópia, o objeto de destino já existe. 
  * Portanto, a lista de inicialização não pode ser usada aqui porque a 

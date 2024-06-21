@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:49:11 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/20 20:23:05 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/21 22:02:57 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
  * classe base que pode ser sobrescrita (redefinida) nas classes derivadas. 
  * Ela permite que métodos com o mesmo nome e assinatura 
  * nas classes derivadas substituam o comportamento da função na classe base. 
- * Aqui estão os pontos principais sobre funções virtuais em C++:
  * 
  * Classes derivadas podem sobrescrever a função virtual da classe base 
  * usando a mesma assinatura (tipo de retorno e parâmetros).

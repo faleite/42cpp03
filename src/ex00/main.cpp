@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 16:25:44 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/19 20:06:14 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/21 21:55:48 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ int	main(void)
 {
 	ClapTrap foo("Fulano");
 	ClapTrap bar("Beltrano");
+	
+	// Ex. Use A copy assignment operator overload.
+	ClapTrap man("Ciclano");
+	man = foo;
+	// Ex. Use copy constructor 
+	ClapTrap a = bar;
 
 	foo.attack("Beltrano");
 	bar.takeDamage(7);

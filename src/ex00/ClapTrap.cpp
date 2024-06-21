@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 16:24:17 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/19 20:58:13 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/21 21:59:08 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10),
  * @brief A copy constructor. 
  * Cria um novo objeto como uma cópia de um objeto existente
  * @param RefConstObjSrc Como e passado este parametro com `&` o objeto
- * referenciado por &RefConstObjSrc não pode ser modificado dentro do método.
+ * referenciado por &copyObj não pode ser modificado dentro do método.
  * 
  * Usar a lista de inicialização no construtor de cópia é a maneira correta 
  * e eficiente de inicializar um objeto com os valores de outro objeto. Isso 
@@ -56,8 +56,9 @@ _attackDamage(copyObj._attackDamage)
  * @brief A copy assignment operator overload.
  * (Sobrecarga do operador de atribuição para cópia).
  * 
- * O operador de atribuição de cópia é utilizado para name
- * objeto que já foi inicializado.
+ * O operador de atribuição de cópia permite que um objeto existente seja 
+ * atribuído a outro objeto da mesma classe, copiando o conteúdo de 
+ * um objeto para outro. 
  * 
  * No operador de atribuição de cópia, o objeto de destino já existe. 
  * Portanto, a lista de inicialização não pode ser usada aqui porque a 
