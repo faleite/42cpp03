@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:49:21 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/20 21:00:17 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/21 16:39:23 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,23 @@ int	main(void)
 	
 	std::cout << "\n*************************************\n" << std::endl;
 
-	// foo.attack("Beltrano");
-	// bar.takeDamage(7);
-	// bar.getStatusLife();
+	foo.attack("Beltrano");
+	bar.takeDamage(7);
 	
-	// bar.attack("Fulano");
-	// foo.takeDamage(9);
-	// bar.beRepaired(1);
-	// foo.getStatusLife();
-	// bar.getStatusLife();
+	bar.attack("Fulano");
+	foo.takeDamage(9);
+	bar.beRepaired(1);
 	
-	// foo.attack("Beltrano");
-	// bar.takeDamage(4);
-	// foo.takeDamage(1);
-	// foo.beRepaired(1);
-	// foo.getStatusLife();
-	// bar.getStatusLife();
+	bar.attack("Ciclano");
+	man.takeDamage(4);
+	man.attack("Beltrano");
+	man.beRepaired(7);
+	
+	foo.getStatusLife();
+	bar.getStatusLife();
+	man.getStatusLife();
 
+	man.highFivesGuys();
+	
 	return (0);
 }

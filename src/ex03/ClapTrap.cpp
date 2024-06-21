@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 16:49:01 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/21 16:25:42 by faaraujo         ###   ########.fr       */
+/*   Created: 2024/06/21 16:40:50 by faaraujo          #+#    #+#             */
+/*   Updated: 2024/06/21 19:02:33 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 ClapTrap::ClapTrap() : _name("None"), _hitPoints(10), _energyPoints(10),
 _attackDamage(0)
 {
-	std::cout << "Default constructor called" << std::endl;	
+	std::cout << "ClapTrap Default constructor called" << std::endl;	
 }
 // Parameterized constructor
 ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitPoints(10),
  _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "Parameterized constructor called for ";
+	std::cout << "ClapTrap constructor called for ";
 	std::cout << this->_name << std::endl;
 }
 
@@ -49,7 +49,7 @@ ClapTrap::ClapTrap(const ClapTrap &copyObj) : _name(copyObj._name),
 _hitPoints(copyObj._hitPoints), _energyPoints(copyObj._energyPoints), 
 _attackDamage(copyObj._attackDamage)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap Copy constructor called" << std::endl;
 }
 
 /**
@@ -67,7 +67,7 @@ _attackDamage(copyObj._attackDamage)
 */
 ClapTrap &ClapTrap::operator=(const ClapTrap &copyAssObj)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "ClapTrap Copy assignment operator called" << std::endl;
 	
 	if (this != &copyAssObj)
 	{
@@ -81,7 +81,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &copyAssObj)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called for ";
+	std::cout << "ClapTrap Destructor called for ";
 	std::cout << this->_name << std::endl;
 }
 
