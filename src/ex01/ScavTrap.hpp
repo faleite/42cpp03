@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:50:12 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/20 20:18:50 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/22 21:06:33 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,17 @@
 
 /**
  * Classe derivada de `ClapTrap`
+ * 
+ * A ordem de construcao: Classes Base primeiro, Classes derivadas depois
+ * A classe derivada pode depender de membros e 
+ * funcionalidades fornecidas pelas classes base. Para garantir que a classe 
+ * derivada tenha um estado válido, todos os membros herdados devem ser 
+ * inicializados antes de qualquer inicialização específica da classe derivada.
+ * 
+ * A ordem de desconstrucao: Classes derivadas primeiro, Classes base depois
+ * Isso garante que quaisquer recursos alocados pelas classes derivadas sejam 
+ * liberados antes que os recursos das classes base sejam liberados, evitando 
+ * possíveis acessos inválidos a recursos que já foram destruídos.
 */
 class ScavTrap : public ClapTrap
 {

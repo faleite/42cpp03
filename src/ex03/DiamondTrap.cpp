@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 17:56:07 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/21 20:30:23 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/22 18:36:11 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,14 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(),
 	std::cout << "DiamondTrap default constructor called" << std::endl;
 }
 
+/**
+ * A lista de inicialização é mais eficiente porque inicializa os membros
+ * diretamente, evitando a criação temporária de objetos e cópias desnecessárias.
+ * 
+ * Trazendo à eficiência, imutabilidade e clareza do codigo. 
+ * Portanto, usar `ClapTrap::_name = name  + "_clap_name"` dentro do escopo da
+ * funcao nao e uma boa pratica.
+ */
 DiamondTrap::DiamondTrap(const std::string &name) 
 	: ClapTrap(name  + "_clap_name"), ScavTrap(), FragTrap(), _name(name)
 {
