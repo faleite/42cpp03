@@ -6,14 +6,13 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 17:56:07 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/22 18:36:11 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/23 17:28:38 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 /**
-
  * Dada nossa ordem de construção, essencialmente todas as variáveis ​​de membro se tornarão
  * aquelas de FragTrap.
  * 
@@ -27,7 +26,7 @@
  * 
  * "class DiamondTrap : public ScavTrap, public FragTrap"
  * 
- * neste caso, "name" também é uma variável de membro da classe DiamondTrap em si
+ * neste caso, "_name" também é uma variável de membro da classe DiamondTrap em si
  * então podemos adicioná-la à lista de inicializadores de membros antes do corpo da função
  * 
  * ClapTrap("_clap_name") <- por que não isso na lista de inicializadores de membros?
@@ -41,9 +40,9 @@
  * assembly é exatamente o mesmo.
  * FragTrap::name também funcionaria.
  * 
- * As variáveis ​​não são duplicadas, especialmente considerando que estamos usando herança virtual
- * e apenas uma instância de classe base é criada. Os construtores restantes adicionam a ela, na melhor das hipóteses,
- * se eles adicionarem mais variáveis.
+ * As variáveis ​​não são duplicadas, especialmente considerando que estamos usando herança 
+ * virtual e apenas uma instância de classe base é criada. Os construtores restantes 
+ * adicionam a ela, na melhor das hipóteses, se eles adicionarem mais variáveis.
  * então, ClapTrap::name == ScavTrap::name == FragTrap::Name,
  * A exceção é DiamondTrap::name que se refere à sua própria variável membro
  * A resolução do conflito é resolvida para o candidato mais próximo, que neste caso
@@ -69,7 +68,7 @@
  * seus respectivos ancestrais.
  * 
  * O que significa... na herança virtual, o compilador basicamente remove todas as chamadas de construtor de seus
- * construtores do meio.....? x'O
+ * construtores do meio.....?
  * 
  * A ordem importa, se você chamar explicitamente o construtor ScavTrap antes do ClapTrap, não compilará e
  * avisará que a ordem está incorreta porque o ClapTrap é a base do ScavTrap
@@ -83,9 +82,9 @@
 DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(),
 								FragTrap(), _name("None")
 {
-	_hitPoints = FragTrap::_hitPoints;
-	_energyPoints = ScavTrap::_energyPoints;
-	_attackDamage = FragTrap::_attackDamage;
+	// _hitPoints = FragTrap::_hitPoints;
+	_energyPoints = ScavTrap::scavEnergyPoints; // ScavTrap::_energyPoints == FragTrap::_energyPoints
+	// _attackDamage = FragTrap::_attackDamage;
 	
 	std::cout << "DiamondTrap default constructor called" << std::endl;
 }
@@ -101,9 +100,9 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(),
 DiamondTrap::DiamondTrap(const std::string &name) 
 	: ClapTrap(name  + "_clap_name"), ScavTrap(), FragTrap(), _name(name)
 {
-	_hitPoints = FragTrap::_hitPoints;
-	_energyPoints = ScavTrap::_energyPoints;
-	_attackDamage = FragTrap::_attackDamage;
+	// _hitPoints = FragTrap::_hitPoints;
+	_energyPoints = ScavTrap::scavEnergyPoints;
+	// _attackDamage = FragTrap::_attackDamage;
 	
 	std::cout << "DiamondTrap " << name << " constructor called" << std::endl;
 }
@@ -111,16 +110,17 @@ DiamondTrap::DiamondTrap(const std::string &name)
 DiamondTrap::DiamondTrap(const DiamondTrap &copyObj) : ClapTrap(copyObj), 
 									ScavTrap(copyObj), FragTrap(copyObj)
 {
-	*this = copyObj;
+	// *this = copyObj;
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
 }
 
 /**
- * Neste caso, uma sobrecarga de operator= para DiamondTrap é inevitável, pois adiciona uma variável membro
- * sobre as variáveis ​​membro herdadas
+ * Neste caso, uma sobrecarga de operator= para DiamondTrap é inevitável, 
+ * pois adiciona uma variável membro sobre as variáveis ​​membro herdadas
  * 
- * Em qualquer caso, para permitir um crescimento maior de suas superclasses, chamamos os operadores de atribuição
- * na ordem de herança que especificamos em DiamondTrap.hpp
+ * Em qualquer caso, para permitir um crescimento maior de suas superclasses, 
+ * chamamos os operadores de atribuição na ordem de herança que especificamos
+ * em DiamondTrap.hpp
  */
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &copyAssObj)
 {

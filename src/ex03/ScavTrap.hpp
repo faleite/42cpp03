@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 16:41:57 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/21 17:09:21 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/23 17:05:29 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ class ScavTrap : virtual public ClapTrap // ScavTrap virtually inherits from Cla
 		
 		void attack(const std::string& target); // Overriding the base class virtual function
 		void guardGate();
+	protected:
+		const static unsigned int scavEnergyPoints = 50;
 };
 
 #endif // SCAVTRAP_HPP

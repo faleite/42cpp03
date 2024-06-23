@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 16:41:00 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/22 17:57:43 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/23 16:42:15 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class ClapTrap
 		virtual void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		void getStatusLife();
+		virtual void getStatusLife();
 };
 
 #endif // CLAPTRAP_HPP

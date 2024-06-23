@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:49:01 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/21 22:04:08 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/23 16:18:43 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,5 +161,6 @@ void ClapTrap::getStatusLife()
 	std::cout << "Status Life of " << _name << std::endl;
 	std::cout << "Hit Points: " << _hitPoints << std::endl;
 	std::cout << "Energy Points: " << _energyPoints << std::endl;
+	std::cout << "Attack Damage: " << _attackDamage << std::endl;
 	std::cout << "-------------------------" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 16:41:26 by faaraujo          #+#    #+#             */
-/*   Updated: 2024/06/22 18:18:53 by faaraujo         ###   ########.fr       */
+/*   Updated: 2024/06/23 17:24:36 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,24 @@
 
 int	main(void)
 {
-	DiamondTrap diamond("Joao");
-	// DiamondTrap diamond;
+	DiamondTrap diamond;
+	DiamondTrap a("tests");
+	diamond = a;
 	
-	diamond.whoAmI();
-	diamond.guardGate();
-	diamond.attack("Fulano");
+	a.whoAmI();
+	a.getStatusLife();
 	diamond.takeDamage(42);
-	diamond.beRepaired(3);
+	std::cout << "-------------------------" << std::endl;
+	diamond.whoAmI();
 	diamond.getStatusLife();
-	diamond.highFivesGuys();
+	
+	// diamond.whoAmI();
+	// diamond.guardGate();
+	// diamond.attack("Fulano");
+	// diamond.takeDamage(42);
+	// diamond.beRepaired(3);
+	// diamond.getStatusLife();
+	// diamond.highFivesGuys();
 	
 	return (0);
 }
